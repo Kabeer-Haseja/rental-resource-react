@@ -1,0 +1,13 @@
+.error{
+    color: red;
+    font-size: 12px;
+ 
+}
+.toggle {
+    margin: 0 0 1.5rem; box-sizing: border-box;
+    font-size: 12px;
+    display: flex; flex-flow: row nowrap;
+    justify-content: flex-start; align-items: stretch;
+  
+  }
+ 
