@@ -34,6 +34,7 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
   )} 100%)`
 }));
 
+
 // ----------------------------------------------------------------------
 const TOTAL = 714000;
 const APP=()=>{
@@ -53,7 +54,7 @@ axios.get(`http://localhost:8080/totalnumberOfRequestApprovedByCustomer`).then((
         <Icon icon={numeriv} width={24} height={24} />
       </IconWrapperStyle>
       <Typography variant="h5" >
-      Pending Requests
+       Requests
       </Typography>
  
       <Typography variant="h4" >

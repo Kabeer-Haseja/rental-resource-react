@@ -6,8 +6,6 @@ import {useState} from 'react';
 import { alpha, styled } from '@material-ui/core/styles';
 import { Card, Typography } from '@material-ui/core';
 import axios from 'axios';
-import { useEffect } from 'react';
-
 // utils
 
 // ----------------------------------------------------------------------
@@ -16,8 +14,8 @@ const RootStyle = styled(Card)(({ theme }) => ({
   boxShadow: 'none',
   textAlign: 'center',
   padding: theme.spacing(5, 0),
-  color: '#F2AA4CFF',
-  backgroundColor:'#101820FF'
+  color: '#FCF6F5FF',
+  backgroundColor:'#2BAE66FF'
 }));
 
 const IconWrapperStyle = styled('div')(({ theme }) => ({
@@ -29,10 +27,10 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
   height: theme.spacing(8),
   justifyContent: 'center',
   marginBottom: theme.spacing(3),
-  color: '#F2AA4CFF',
-  backgroundImage: `linear-gradient(135deg, ${alpha('#F2AA4CFF', 0)} 0%, ${alpha(
-    '#C1D2D2',
-    0.24
+  color: '#2BAE66FF',
+  backgroundImage: `linear-gradient(135deg, ${alpha('#2BAE66FF', 0)} 0%, ${alpha(
+    '#FCF6F5FF',
+    0.42
   )} 100%)`
 }));
 
@@ -41,22 +39,21 @@ const TOTAL = 714000;
 const APP=()=>{
 
 }
-export default function TotalProducts() {
+export default function TotalRent() {
     const [state,setstate]=useState(0);
     const data=JSON.parse(localStorage.getItem('ssd'));
- useEffect(() => {
-  axios.get(`http://localhost:8080/getcustomerproducts/${data.id}`).then((response)=>{
+  
+axios.get(`http://localhost:8080/totalRentproducts`).then((response)=>{
     setstate(response.data);
+
 })
- 
-}, []); 
   return (
     <RootStyle>
       <IconWrapperStyle>
         <Icon icon={numeriv} width={24} height={24} />
       </IconWrapperStyle>
       <Typography variant="h5" >
-      Products
+      Rented
       </Typography>
  
       <Typography variant="h4" >

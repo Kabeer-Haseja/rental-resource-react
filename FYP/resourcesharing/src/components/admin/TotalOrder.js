@@ -4,6 +4,8 @@ import numeriv from '@iconify/icons-ant-design/number-outline'
 // material
 import { alpha, styled } from '@material-ui/core/styles';
 import { Card, Typography } from '@material-ui/core';
+import { useEffect,useState } from 'react';
+import axios from 'axios'
 // utils
 
 // ----------------------------------------------------------------------
@@ -38,6 +40,15 @@ const APP=()=>{
 
 }
 export default function TotalOrder() {
+  const [state,setstate]=useState(0);
+  const data=JSON.parse(localStorage.getItem('ssd'));
+useEffect(() => {
+axios.get(`http://localhost:8080/totalorderbycustomer/${data.id}`).then((response)=>{
+  setstate(response.data);
+})
+
+}, []); 
+
   return (
     <RootStyle>
       <IconWrapperStyle>
@@ -46,6 +57,10 @@ export default function TotalOrder() {
       <Typography variant="h4" >
       Total Order
       </Typography>
+      <Typography variant="h4" >
+      {state}
+      </Typography>
+
     </RootStyle>
   );
 }

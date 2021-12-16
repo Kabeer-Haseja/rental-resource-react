@@ -112,6 +112,7 @@ Swal.fire({
   confirmButtonText: 'Yes, Rent it!'
 }).then((result) => {
   if (result.value) {
+    alert(notification.productId)
      axios.get(`http://localhost:8080/changeOrderStatus/${notification.productId}`).then((response)=>{
        alert("orderStatusChange")
      axios.get(`http://localhost:8080//ChangeNotificationStatus/${notification.notificationId}`).then((response)=>{

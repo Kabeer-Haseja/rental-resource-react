@@ -7,7 +7,6 @@ import SuperAdminNavBar from './SuperAdminNavBar';
 import SuperAdminDashboardSidebar from './SuperAdminDashboardSidebar';
 const SuperMain = () => {
     const [open, setOpen] = useState(false);
-    alert("Super Main")
     return (
         <div className="sb-nav-fixed">
             <SuperAdminNavBar onOpenSidebar={() => setOpen(true)} />

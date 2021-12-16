@@ -9,6 +9,8 @@ import Page from '../Page';
 import TotalUser from './TotalUser';
 import TotalProducts from './TotalProducts';
 import TotalRequests from './TotalRequests';
+import TotalRent from './TotalRent';
+import TotalCompleted from './TotalCompleted';
 
 export const BoxContainer = styled.div`
 width: 100%;
@@ -31,15 +33,21 @@ const Dashboard = () => {
             <Typography variant="h4">Admin Dashboard</Typography>
           </Box>
           <CssBaseline />
-          <Grid container spacing={3}>
-            <Grid item xs={12} sm={6} md={3}>
+          <Grid container spacing={2}>
+            <Grid item xs={4} sm={3} md={2}>
               <TotalUser/>
             </Grid>
-            <Grid item xs={12} sm={6} md={3}>
+            <Grid item xs={4} sm={3} md={2}>
               <TotalProducts/>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={3}>
+                    <Grid item xs={4} sm={3} md={2}>
               <TotalRequests/>
+                    </Grid>
+                    <Grid item xs={4} sm={3} md={2}>
+              <TotalRent/>
+                    </Grid>
+                    <Grid item xs={4} sm={3} md={2}>
+              <TotalCompleted/>
                     </Grid>
       
           </Grid>

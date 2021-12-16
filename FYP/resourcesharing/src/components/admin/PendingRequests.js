@@ -197,7 +197,7 @@ const PendingRequests = () => {
                     mb={5} >
                     <Typography variant="h4"
                         gutterBottom >
-                        Pending Requests
+                       Notifications
                     </Typography>
 
                 </Stack>

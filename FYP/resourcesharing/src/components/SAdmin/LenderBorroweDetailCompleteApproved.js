@@ -7,7 +7,7 @@ import DateCountdown from 'react-date-countdown-timer';
 import Clock from './Clock';
 // Types...
 
-function LenderBorroweDetail() {
+function LenderBorroweDetailCompleteApproved() {
     const data = JSON.parse(localStorage.getItem('rowdetail'));
     
     const [customerdetail, setcustomerdetail] = useState([])
@@ -198,10 +198,10 @@ useEffect(() => {
                                             
                                             <h4 class="card-title1">Order Status:  {requestOrderDetail.orderstatus}</h4>
 
-                                            <div class="button" id="button-5">
+                                            {/* <div class="button" id="button-5">
                                                 <div id="translate"></div>
                                                 <a onClick={changeProductStatus}>Update Status</a>
-                                            </div>
+                                            </div> */}
                                             {/* <div class="button" id="button-5">
                                                 <div id="translate"></div>
                                                 <a onClick={completeOrder}>Complete</a>
@@ -221,4 +221,4 @@ useEffect(() => {
     );
 }
 
-export default LenderBorroweDetail;
+export default LenderBorroweDetailCompleteApproved;

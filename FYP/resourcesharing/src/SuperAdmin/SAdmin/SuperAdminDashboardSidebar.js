@@ -42,7 +42,6 @@ SuperAdminDashboardSidebar.propTypes = {
 
 export default function SuperAdminDashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
   const { pathname } = useLocation();
-alert("Super Dashboard side bar")
   useEffect(() => {
     if (isOpenSidebar) {
       onCloseSidebar();
@@ -64,10 +63,9 @@ alert("Super Dashboard side bar")
             <Avatar src="{account.photoURL}" alt="photoURL" />
             <Box sx={{ ml: 2 }}>
               <Typography variant="subtitle2" sx={{ color: 'text.primary' }}>
-                kabeer Admin
+                Super Admin
               </Typography>
               <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                role
               </Typography>
             </Box>
           </AccountStyle>

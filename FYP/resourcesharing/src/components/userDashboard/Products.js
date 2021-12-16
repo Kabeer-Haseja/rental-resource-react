@@ -121,7 +121,7 @@ export default function Products(product, value) {
 
                       onClick={() => setOpenFilter(true)}
                     >
-                      <b>Filterss</b>&nbsp;
+                      <b>Filters</b>&nbsp;
                     </Button>
                     <FormikProvider value={formik}>
                       <Form autoComplete="off" noValidate>
@@ -201,8 +201,7 @@ export default function Products(product, value) {
               onCloseFilter={handleCloseFilter}
             /> */}
 
-                    <ProductSort />
-
+               
                   </Stack>
                 </Stack>
 

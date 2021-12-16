@@ -145,7 +145,7 @@ const TABLE_HEAD = [
     localStorage.setItem("rowdetail",JSON.stringify(row))
 
     history.push({
-        pathname:'/superadmin/borrowerlander',
+        pathname:'/superadmin/borrowerlanderCompleteApproved',
    
       })
   }

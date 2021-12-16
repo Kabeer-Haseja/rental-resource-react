@@ -34,7 +34,7 @@ const sidebarConfig = [
     icon: getIcon(fileTextFill)
   },
   {
-    title: 'Pending Requests',
+    title: 'Notifications',
     path: '/admin/PendingRequests',
     icon: getIcon(fileTextFill)
   },

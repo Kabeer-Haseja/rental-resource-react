@@ -11,6 +11,7 @@ import MHidden from '../../components/@material-extend/MHidden';
 import menu2Fill from '@iconify/icons-eva/menu-2-fill';
 import { Icon } from '@iconify/react';
 import NotificationsPopover from './NotificationsPopover'
+import AccountPopover from '../../layouts/admin/AccountPopover';
 const DRAWER_WIDTH = '100%';
 const APPBAR_MOBILE = 64;
 const APPBAR_DESKTOP = 92;
@@ -62,6 +63,7 @@ export default function Navbar({onOpenSidebar},props){
                 <Stack direction="row" alignItems="center" >
       
                   <NotificationsPopover/> 
+                  <AccountPopover/>
       </Stack>
             </ToolbarStyle>
 
