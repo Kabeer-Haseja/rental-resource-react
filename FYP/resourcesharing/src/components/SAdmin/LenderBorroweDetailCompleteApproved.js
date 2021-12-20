@@ -63,7 +63,6 @@ function LenderBorroweDetailCompleteApproved() {
             setproductDetail(response.data)
         })
         axios.get(`http://localhost:8080/requestOrderDetail/${data.row.productid}/${data.row.orderstatus}`).then((response) => {
-        alert("ss")  
         setRequestOrderDetail(response.data)
         })
       
@@ -71,7 +70,6 @@ function LenderBorroweDetailCompleteApproved() {
     }
 useEffect(() => {
     
-    console.log(data.row.id)
       axios.get(`http://localhost:8080/customerRequest/${data.row.id}`).then((response) => {
             setcustomerdetail(response.data)
         })
@@ -101,9 +99,7 @@ useEffect(() => {
     }
     const completeOrder=()=>{
         axios.get(`http://localhost:8080/changeProductStatusAdmintoNotRented/${data.row.productid}`).then((response) => {
-           alert("not rented")
         axios.get(`http://localhost:8080/changeorderStatusAdminCompleted/${data.row.productid}`).then((response) => {
-            alert("changestatusadmincompleted")  
             axios.get(`http://localhost:8080/deletenotification/${data.row.productid}`).then((response) => {
                
                     reload()
@@ -152,28 +148,6 @@ useEffect(() => {
                                             <h3 class="card-title">CNIC: {productHonor.nic}</h3>
 
                                             <p class="card-text">{productHonor.username}</p>
-                                            <ul class="list-inline">
-                                                <li class="list-inline-item">
-                                                    <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                        <i class="fa fa-facebook"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                        <i class="fa fa-twitter"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                        <i class="fa fa-skype"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                                                        <i class="fa fa-google"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
                                         </div>
                                     </div>
                                 </div>

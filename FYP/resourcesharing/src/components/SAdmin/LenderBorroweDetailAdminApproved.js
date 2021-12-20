@@ -63,7 +63,6 @@ function LenderBorroweDetailAdminApproved() {
             setproductDetail(response.data)
         })
         axios.get(`http://localhost:8080/requestOrderDetail/${data.row.productid}/${data.row.orderstatus}`).then((response) => {
-        alert("ss")  
         setRequestOrderDetail(response.data)
         })
       
@@ -101,10 +100,10 @@ useEffect(() => {
     }
     const completeOrder=()=>{
         axios.get(`http://localhost:8080/changeProductStatusAdmintoNotRented/${data.row.productid}`).then((response) => {
-           alert("not rented")
+       
         axios.get(`http://localhost:8080/changeorderStatusAdminCompleted/${data.row.productid}`).then((response) => {
-            alert("changestatusadmincompleted")  
-            axios.get(`http://localhost:8080/deletenotification/${data.row.productid}`).then((response) => {
+       
+        axios.get(`http://localhost:8080/deletenotification/${data.row.productid}`).then((response) => {
                
                     reload()
                         

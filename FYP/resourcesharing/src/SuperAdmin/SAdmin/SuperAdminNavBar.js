@@ -53,7 +53,6 @@ export default function SuperAdminNavBar({onOpenSidebar},props){
    
 
                 <IconButton onClick={onOpenSidebar} sx={{ mr: 1, color: 'black' }}>
-                <Icon  icon={menu2Fill} />
                      </IconButton>
              
                 </div>

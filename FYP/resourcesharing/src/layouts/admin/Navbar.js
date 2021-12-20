@@ -58,8 +58,7 @@ export default function Navbar({ onOpenSidebar }, props) {
 
         <IconButton onClick = { onOpenSidebar }
         sx = {     { mr: 1, color: 'black' } } >
-        <Icon icon = { menu2Fill }
-        /> </IconButton>
+       </IconButton>
 
         </div>
 

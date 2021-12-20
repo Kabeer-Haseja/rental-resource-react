@@ -74,7 +74,7 @@ export default function ShopProductCard({ product }) {
               }}
             >
             </Typography>
-            &nbsp;
+           Price &nbsp;
             {price}
           </Typography>
         </Stack>

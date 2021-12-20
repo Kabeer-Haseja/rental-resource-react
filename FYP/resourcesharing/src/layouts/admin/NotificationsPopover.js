@@ -112,9 +112,7 @@ Swal.fire({
   confirmButtonText: 'Yes, Rent it!'
 }).then((result) => {
   if (result.value) {
-    alert(notification.productId)
      axios.get(`http://localhost:8080/changeOrderStatus/${notification.productId}`).then((response)=>{
-       alert("orderStatusChange")
      axios.get(`http://localhost:8080//ChangeNotificationStatus/${notification.notificationId}`).then((response)=>{
       Swal.fire(
         'Pending!',
@@ -272,9 +270,6 @@ export default function NotificationsPopover(props) {
         <Divider />
 
         <Box sx={{ p: 1 }}>
-          <Button fullWidth disableRipple component={RouterLink} to="#">
-            View All
-          </Button>
         </Box>
       </MenuPopover>
   

@@ -64,7 +64,6 @@ const handleSubmit = async(event) => {
    
      
 await axios.post('http://localhost:8080/login',userInfo).then((response)=>{
- alert()
 setState('success');
     
   dispatch(logindata(response.data))
